@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
     return res.send(message);
 });
 
-router.delete('/messageId', (req, res) => {
+router.delete('/:messageId', (req, res) => {
     const {
         [req.params.messageId]: message,
         ...otherMessages
